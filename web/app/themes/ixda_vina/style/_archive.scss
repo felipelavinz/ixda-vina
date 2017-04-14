@@ -19,3 +19,34 @@
 	line-height: 1.5;
 	margin-bottom: 24px;
 }
+.archive__pagination {
+	.page-numbers {
+		@extend .btn-ghost;
+		@extend .btn-default;
+		font-weight: bold;
+		padding: .25em .75em;
+		display: none;
+		margin: .5em .25em;
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+	.next,
+	.prev {
+		display: inline-block;
+	}
+	.dots {
+		background-color: $gray-lighter;
+		color: $gray-light;
+		border-color: $gray-lighter;
+	}
+	.current {
+		@extend .btn-ghost:hover;
+	}
+}
+@include media-breakpoint-up( sm ) {
+	.archive__pagination {
+		.page-numbers {
+			display: inline-block;
+		}
+	}
+}

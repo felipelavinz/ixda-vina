@@ -3864,17 +3864,17 @@ body {
     height: 6px;
     background-image: linear-gradient(79deg, #00a099, #cf2975 52%, #d8d8d8); }
 
-.btn-default, .subscribe__submit {
+.btn-default, .subscribe__submit, .archive__pagination .page-numbers {
   padding: 14px 46px;
   text-transform: uppercase;
   font-weight: bold; }
 
-.btn-ghost, .subscribe__submit {
+.btn-ghost, .subscribe__submit, .archive__pagination .page-numbers {
   border: 3px solid #cf2a75;
   color: #cf2a75;
   background: transparent;
   transition: all .15s; }
-  .btn-ghost:hover, .subscribe__submit:hover, .btn-ghost:focus, .subscribe__submit:focus {
+  .btn-ghost:hover, .subscribe__submit:hover, .archive__pagination .page-numbers:hover, .archive__pagination .current, .btn-ghost:focus, .subscribe__submit:focus, .archive__pagination .page-numbers:focus {
     background: linear-gradient(to bottom, #cf2a75, #dc5090);
     color: #fff;
     text-decoration: none;
@@ -4166,6 +4166,27 @@ body {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 24px; }
+
+.archive__pagination .page-numbers {
+  font-weight: bold;
+  padding: .25em .75em;
+  display: none;
+  margin: .5em .25em;
+  text-transform: uppercase;
+  font-size: 18px; }
+
+.archive__pagination .next,
+.archive__pagination .prev {
+  display: inline-block; }
+
+.archive__pagination .dots {
+  background-color: #eceeef;
+  color: #636c72;
+  border-color: #eceeef; }
+
+@media (min-width: 576px) {
+  .archive__pagination .page-numbers {
+    display: inline-block; } }
 
 .site-footer {
   opacity: 0.7;

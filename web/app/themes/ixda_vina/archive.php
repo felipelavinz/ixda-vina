@@ -31,7 +31,9 @@ get_header(); ?>
 			</div>
 			<div class="row articles__more-container">
 				<div class="col-12">
-					<a id="articles__load-more" href="#" class="btn-default btn-ghost">Cargar más publicaciones</a>
+					<nav class="archive__pagination">
+						<?php echo paginate_links() ?>
+					</nav>					
 				</div>
 			</div>
 			<?php else : ?>
