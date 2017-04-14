@@ -1,0 +1,87 @@
+// Entrada individual
+.the-post {
+	margin-bottom: 170px;
+}
+.single-post__image {
+	display: block;
+	height: auto;
+	width: auto;
+	margin-left: -35px;
+}
+.single-post__header-text {
+	max-width: 800px;
+	margin: 25px auto 50px;
+	color: $light-eggplant;
+	a {
+		font-weight: bold;
+	}
+}
+.single-post__title {
+	font-size: 24px;
+	line-height: 1;
+	margin-bottom: 20px;
+}
+.single-post__header {
+	.row {
+		align-items: flex-end;
+	}
+}
+.single-post__meta {
+	p {
+		margin-bottom: .25em;
+	}
+}
+.single-post__content {
+	margin: 0 auto 70px;
+	max-width: 760px;
+	font-size: 16px;
+	color: #333;
+	line-height: 26px;
+}
+.single-post__share {
+	text-align: right;
+}
+.single-post__share-icon {
+	border: none;
+	background: none;
+	width: 36px;
+	height: 36px;
+	padding: 0;
+	svg {
+		width: 36px;
+		height: 36px;
+	}
+	path {
+		fill: $darkish-pink !important;
+	}
+}
+#single-post__share-twitter {
+	position: relative;
+	top: 4px;
+	margin-left: 8px;
+}
+
+@include media-breakpoint-up( sm ) {
+	.single-post__image {
+		margin: 0 auto;
+		width: 100%;
+	}
+	.single-post__header-text--has-image {
+		margin-top: -150px;
+		min-height: 150px;
+		background: #fff;
+		position: relative;
+	}
+	.single-post__header-text {
+		padding: 25px;
+	}
+	.single-post__title {
+		font-size: 48px;
+	}
+}
+@include media-breakpoint-up( md ) {
+	.single-post__header-text--has-image {
+		margin-top: -225px;
+		min-height: 225px;
+	}
+}

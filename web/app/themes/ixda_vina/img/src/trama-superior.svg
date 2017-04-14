@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1224px" height="976px" viewBox="0 0 1224 976" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="269.244834 896.208726 -2.84217094e-14 896.208726 -2.84217094e-14 3.41060513e-13 269.244834 3.41060513e-13 538.489668 3.41060513e-13 538.489668 896.208726 269.244834 896.208726"></polygon>
+        <polygon id="path-3" points="269.244834 896.208726 -2.84217094e-14 896.208726 -2.84217094e-14 3.41060513e-13 269.244834 3.41060513e-13 538.489668 3.41060513e-13 538.489668 896.208726 269.244834 896.208726"></polygon>
+        <polygon id="path-5" points="675.039201 2.27373675e-13 -2.27373675e-13 2.27373675e-13 -2.27373675e-13 429.281264 675.039201 429.281264 675.039201 2.27373675e-13"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00-home-ixda-viña" transform="translate(0.000000, -894.000000)">
+            <g id="Group-8" transform="translate(-224.000000, 827.000000)">
+                <g id="Page-1" opacity="0.195195896" transform="translate(1294.010508, 521.968541) rotate(35.000000) translate(-1294.010508, -521.968541) translate(1024.510508, 73.468541)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <polygon id="Fill-1" fill="#FEFEFE" mask="url(#mask-2)" points="99.6743832 265.960009 246.293524 151.089211 254.315967 82.5946969 310.485652 84.0522948 350.242935 116.310774 455.420759 3.41060513e-13 535.972428 3.41060513e-13 538.489668 896.208726 -0.000755171895 738.055578"></polygon>
+                </g>
+                <g id="Page-1" opacity="0.195195896" transform="translate(891.484461, 383.286897) rotate(100.000000) translate(-891.484461, -383.286897) translate(621.984461, -65.213103)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <polygon id="Fill-1" fill="#FEFEFE" mask="url(#mask-4)" points="99.6743832 265.960009 246.293524 151.089211 254.315967 82.5946969 310.485652 84.0522948 350.242935 116.310774 455.420759 3.41060513e-13 535.972428 3.41060513e-13 538.489668 896.208726 -0.000755171895 738.055578"></polygon>
+                </g>
+                <g id="Page-1" opacity="0.252716884" transform="translate(1323.216586, 481.195462) rotate(-30.000000) translate(-1323.216586, -481.195462) translate(985.216586, 266.195462)">
+                    <mask id="mask-6" fill="white">
+                        <use xlink:href="#path-5"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <polygon id="Fill-1" fill="#FEFEFE" mask="url(#mask-6)" points="117.430943 109.696028 -0.000425445143 427.864493 675.039201 429.281264 673.621051 -0.000283354157 226.247047 119.544002"></polygon>
+                </g>
+                <polyline id="Page-1" fill="#FEFEFE" opacity="0.187033582" transform="translate(474.993856, 558.415005) rotate(150.000000) translate(-474.993856, -558.415005) " points="125.69537 213.430019 247.669547 412.413177 233.609786 454.203404 824.292341 903.399992 125.69537 903.399992"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

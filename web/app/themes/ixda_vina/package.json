@@ -1,0 +1,21 @@
+{
+  "name": "ixda_vina",
+  "version": "0.1.0",
+  "description": "Sitio para el capítulo local de IxDA para Viña del Mar, Chile",
+  "main": "index.js",
+  "repository": "git@github.com:felipelavinz/ixda-vina",
+  "author": "IxDA Viña del Mar",
+  "license": "GPL-2.0+",
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha6",
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.5.0",
+    "gulp-watch": "^4.3.11",
+    "node-sass": "^4.5.2"
+  },
+  "devDependencies": {
+    "gulp-svgmin": "^1.2.3"
+  }
+}

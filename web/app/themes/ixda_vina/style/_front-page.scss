@@ -1,0 +1,88 @@
+.feature {
+	background: #576269;
+}
+.feature__title {
+	font-size: 45px;
+	font-weight: bold;
+	line-height: 1.13;
+	letter-spacing: -1.18px;
+	color: #fff;
+	text-transform: uppercase;
+}
+.about {
+	padding: 47px 0 59px;
+	font-size: 14px;
+	p {
+		margin-top: 17px;
+		max-width: 25em;
+	}
+}
+.feature-secondary {
+	padding: 70px 0 43px;
+	background: #1D9F98;
+	background-image: url("../img/dist/trama-superior.svg"), linear-gradient(79deg, #00a099, #cf2975 72%, #d8d8d8 122%);
+	background-size: cover, contain;
+	background-position: center center, center center;
+	color: #fff;
+	font-weight: bold;
+	line-height: 1.1;
+}
+.feature-secondary__title {
+	font-size: 50px;
+	max-width: 18em;
+	display: block;
+}
+.feature-secondary__description {
+	font-size: 18px;
+	display: block;
+	text-align: right;
+	padding: .415em 0;
+	margin-top: 23px;
+}
+.subscribe {
+	background-color: $darkish-pink;
+	background-image: url("../img/dist/trama-magenta.svg");
+	background-size: cover;
+	background-position: 25% center;
+	color: #fff;
+	padding: 40px 0 60px;
+	label {
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+}
+.subscribe__header {
+	h2 {
+		font-size: 28px;
+		text-transform: uppercase;
+	}
+}
+.subscribe__submit {
+	@extend .btn-ghost;
+	@extend .btn-default;
+	border-color: #fff;
+	color: #fff;
+	padding: 5px 20px;
+	margin-top: 30px;
+	&:hover,
+	&:focus {
+		color: $darkish-pink;
+		background-image: linear-gradient( to bottom, #fff, $darkish-pink 300% );
+	}
+}
+@include media-breakpoint-up( sm ) {
+	.feature {
+		min-height: 500px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.feature__title {
+		display: inline-block;
+		max-width: 17em;
+	}
+	.feature-secondary {
+		background-size: 100%, contain;
+		background-position: center 25%, center center;
+	}
+}

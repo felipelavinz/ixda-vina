@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1224px" height="887px" viewBox="0 0 1224 887" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 7</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="675.039201 4.54747351e-13 -3.41060513e-13 4.54747351e-13 -3.41060513e-13 429.281264 675.039201 429.281264 675.039201 4.54747351e-13"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00-home-ixda-viña" transform="translate(0.000000, -1680.000000)">
+            <g id="Group-7" transform="translate(-47.000000, 1680.000000)">
+                <rect id="Rectangle-8" fill="#E43B85" x="0" y="293" width="1280" height="269"></rect>
+                <polyline id="Page-1" fill="#FEFEFE" opacity="0.187033582" transform="translate(1011.993856, 473.415005) rotate(150.000000) translate(-1011.993856, -473.415005) " points="662.69537 128.430019 784.669547 327.413177 770.609786 369.203404 1361.29234 818.399992 662.69537 818.399992"></polyline>
+                <polyline id="Page-1" fill="#FEFEFE" opacity="0.187033582" points="23 121 144.974177 319.983159 130.914416 361.773386 721.596971 810.969974 23 810.969974"></polyline>
+                <g id="Page-1" opacity="0.134794776" transform="translate(1187.216586, 556.195462) rotate(-30.000000) translate(-1187.216586, -556.195462) translate(849.216586, 341.195462)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <polygon id="Fill-1" fill="#FEFEFE" mask="url(#mask-2)" points="150.431368 101.696311 33 419.864776 708.039627 421.281547 706.621476 -8 259.247472 111.544285"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
