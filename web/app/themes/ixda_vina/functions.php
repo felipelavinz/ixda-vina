@@ -1,4 +1,5 @@
 <?php
+
 /**
  * IxDA Viña del Mar functions and definitions
  *
@@ -45,7 +46,7 @@ function ixda_vina_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( [
 		'main'      => esc_html__( 'Primary', 'ixda_vina' ),
-		'auxiliary' => esc_html__('Auxiliary', 'ixda_vina'),
+		'auxiliary' => esc_html__( 'Auxiliary', 'ixda_vina' ),
 	] );
 
 	/*
@@ -113,16 +114,16 @@ add_action( 'widgets_init', 'ixda_vina_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ixda_vina_scripts() {
-	wp_enqueue_style( 'webfonts', '//fonts.googleapis.com/css?family=Roboto:400,400i,700', [], false, 'all' );
+	wp_enqueue_style( 'webfonts', '//fonts.googleapis.com/css?family=Roboto:400,400i,700,700i', [], false, 'all' );
 	wp_enqueue_style( 'ixda_vina-style', get_stylesheet_directory_uri() .'/style/style.css', [ 'webfonts'] );
 
 	// wp_enqueue_script( 'ixda_vina-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	// wp_enqueue_script( 'ixda_vina-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	// 	wp_enqueue_script( 'comment-reply' );
+	// }
 }
 add_action( 'wp_enqueue_scripts', 'ixda_vina_scripts' );
 
@@ -215,25 +216,57 @@ function ixda_has_partners() {
 }
 
 /**
- * Configurar la API Key para Google Maps
+ * Controla cosas específicas del tema
  */
-add_filter('acf/fields/google_map/api', function( $api ){
-	$api['key'] = $_ENV['GOOGLE_MAPS_API_KEY'] ?? '';
-	return $api;
-});
+class Ixda_Vina_Theme {
 
-add_action('pre_get_posts', function( WP_Query $q ){
-	if ( is_front_page() && $q->is_main_query() ) {
-		$q->set('posts_per_page', 2);
+	/**
+	 * Inicializar accciones y filtros
+	 */
+	public function init() {
+		add_filter('get_the_archive_title', [ $this, 'filter_archive_title'] );
+		add_action('pre_get_posts', [ $this, 'modify_main_query'] );
+		add_filter('acf/fields/google_map/api', [ $this, 'set_google_maps_api_key']);
 	}
-	if ( is_archive() && $q->is_main_query() ) {
-		$q->set('posts_per_page', 8);
-	}
-});
 
-add_filter('get_the_archive_title', function( string $title ) : string {
-	if ( is_category() ) {
-		return single_cat_title( '', false );
+	/**
+	 * Configura la API Key de Google Maps, que se obtiene del archivo de variables de entorno
+	 * @param  array $api Propiedades del API de Google Maps
+	 * @return array      Proopiedades del API de Google Maps filtradas
+	 */
+	public function set_google_maps_api_key( array $api ) : array {
+		$api['key'] = $_ENV['GOOGLE_MAPS_API_KEY'] ?? '';
+		return $api;
 	}
-	return $title;
-});
+
+	/**
+	 * Modificar la Query principal de WordPressInstaller
+	 * @param  WP_Query $q Query de WordPress
+	 * @return WP_Query    Query modificad
+	 */
+	public function modify_main_query( WP_Query $q ) : WP_Query {
+		if ( is_front_page() && $q->is_main_query() ) {
+			$q->set('posts_per_page', 2);
+		}
+		if ( is_archive() && $q->is_main_query() ) {
+			$q->set('posts_per_page', 8);
+		}
+		return $q;
+	}
+
+	/**
+	 * Filtrar el título en páginas de archivos
+	 * @param  string $title Título de la página de archivo
+	 * @return string        Título filtrado
+	 */
+	public function filter_archive_title( string $title ) : string {
+		if ( is_category() ) {
+			return single_cat_title( '', false );
+		}
+		return $title;
+	}
+}
+
+(function(){
+	( new Ixda_Vina_Theme )->init();
+})();

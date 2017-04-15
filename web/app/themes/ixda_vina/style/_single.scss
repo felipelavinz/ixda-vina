@@ -60,6 +60,15 @@
 	top: 4px;
 	margin-left: 8px;
 }
+.single-post__summary {
+	text-align: center;
+	color: $gray-light;
+	font-style: italic;
+	margin: 1em 0 2em;
+}
+.single-post__content {
+	@include std-text;
+}
 
 @include media-breakpoint-up( sm ) {
 	.single-post__image {
@@ -77,6 +86,9 @@
 	}
 	.single-post__title {
 		font-size: 48px;
+	}
+	.single-post__summary {
+		font-size: $font-size-h3;
 	}
 }
 @include media-breakpoint-up( md ) {

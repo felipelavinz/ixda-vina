@@ -33,6 +33,7 @@
 		<?php endif; ?>
 		<div class="entry-content single-post__content">
 			<?php the_content(); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-link">' . 'Páginas:', 'after' => '</div>' ) ); ?>
 		</div>
 	</article>
 </div>
