@@ -10,11 +10,18 @@
 	text-transform: uppercase;
 }
 .about {
-	padding: 47px 0 59px;
+	padding: 47px 0 0;
 	font-size: 14px;
+	.row > div {
+		padding-bottom: 59px;
+	}
 	p {
 		margin-top: 17px;
 		max-width: 25em;
+	}
+	.btn-ghost {
+		display: inline-block;
+		margin: 24px 0 0;
 	}
 }
 .feature-secondary {

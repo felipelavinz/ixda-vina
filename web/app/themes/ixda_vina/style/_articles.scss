@@ -33,18 +33,24 @@
 	text-align: center;
 	margin: 60px 0;
 }
-
-@include media-breakpoint-up( sm ) {
+@include media-breakpoint-up( md ) {
 	.list-entry__image {
-		position: absolute;
-		left: 0;
-		top: 0;
-		float: left;
 		display: block;
+		width: 100%;
+		height: auto;
+		margin-bottom: 24px;
 	}
+}
+@include media-breakpoint-up( lg ) {
 	.list-entry--has-post-thumbnail {
 		position: relative;
 		padding-left: 223px;
 	}
-
+	.list-entry__image {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: auto;
+		float: left;
+	}
 }

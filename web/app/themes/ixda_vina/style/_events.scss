@@ -1,7 +1,3 @@
-.event {
-	position: relative;
-	padding-left: 91px;
-}
 .event__dtstart {
 	background: $darkish-pink;
 	text-transform: uppercase;
@@ -9,9 +5,13 @@
 	color: #fff;
 	font-size: 16px;
 	text-align: center;
-	position: absolute;
 	width: 72px;
-	left: 0;
+	float: left;
+	margin: 0 19px 19px 0;
+}
+.event__dtstart-month {
+	display: block;
+	background: $darkish-pink;
 }
 .event__dtstart-day {
 	display: block;
@@ -24,4 +24,28 @@
 	font-size: 18px;
 	text-transform: uppercase;
 	line-height: 1.33;
+	margin-top: 24px;
+}
+.event__summary {
+	clear: both;
+}
+@include media-breakpoint-up( sm ) {
+	.event__dtstart {
+		float: none;
+		width: 72px;
+		margin: 0;
+		> span {
+			width: 72px;
+		}
+	}
+}
+@include media-breakpoint-up( lg ) {
+	.event {
+		position: relative;
+		padding-left: 91px;
+	}
+	.event__dtstart {
+		position: absolute;
+		left: 0;
+	}
 }

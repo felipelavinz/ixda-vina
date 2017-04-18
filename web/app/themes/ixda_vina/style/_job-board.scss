@@ -1,5 +1,5 @@
 .job-board-entry {
-
+	margin-bottom: 60px;
 }
 .board-entry__published {
 	display: block;
@@ -14,4 +14,9 @@
 }
 .board__summary {
 	font-size: 14px;
+}
+@include media-breakpoint-up( lg ) {
+	.job-board-entry {
+		margin-bottom: 0;
+	}
 }

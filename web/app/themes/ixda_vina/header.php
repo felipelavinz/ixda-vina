@@ -48,5 +48,4 @@
 				</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
-
-	<div id="main" class="site-main">
+	<div id="main-wrap" class="site-main-wrap">
