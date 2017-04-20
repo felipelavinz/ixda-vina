@@ -116,6 +116,7 @@ add_action( 'widgets_init', 'ixda_vina_widgets_init' );
 function ixda_vina_scripts() {
 	wp_enqueue_style( 'webfonts', '//fonts.googleapis.com/css?family=Roboto:400,400i,700,700i', [], false, 'all' );
 	wp_enqueue_style( 'ixda_vina-style', get_stylesheet_directory_uri() .'/style/style.css', [ 'webfonts'] );
+	wp_enqueue_script( 'gulp-iconify', get_stylesheet_directory_uri() .'/img/output/grunticon.loader.js', [], '0.1.0', false );
 
 	// wp_enqueue_script( 'ixda_vina-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -126,6 +127,19 @@ function ixda_vina_scripts() {
 	// }
 }
 add_action( 'wp_enqueue_scripts', 'ixda_vina_scripts' );
+
+add_action('wp_head', function(){
+$path = get_stylesheet_directory_uri() .'/style';
+echo<<<EOL
+<script>
+grunticon([
+	"$path/icons.svg.css",
+	"$path/icons.png.css",
+	"$path/icons.fallback.css"
+], grunticon.svgLoadedCallback );
+</script>
+EOL;
+}, 9999);
 
 add_filter('wp_nav_menu_objects', function( $menu_items, $args ){
 	if ( $args->theme_location !== 'main' ) {

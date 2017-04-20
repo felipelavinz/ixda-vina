@@ -24,6 +24,7 @@
 	<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'ixda_vina' ); ?></a>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
+			<img class="logo-ixda--mobile visible-xs" src="<?php echo get_stylesheet_directory_uri() ?>/img/dist/logo-ixda.svg" alt="IxDA Viña del Mar" />
 			<?php
 				wp_nav_menu([
 					'theme_location'  => 'auxiliary',
@@ -35,7 +36,10 @@
 				]);
 			?>
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ixda_vina' ); ?></button> -->
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+						<span class="sr-only"><?php esc_html_e( 'Menú Principal', 'ixda_vina' ); ?></span>
+						<span class="icon icon-menu" data-grunticon-embed></span>
+					</button>
 					<?php
 						wp_nav_menu( [
 							'theme_location' => 'main',
