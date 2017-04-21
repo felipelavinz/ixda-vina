@@ -138,6 +138,7 @@ grunticon([
 	"$path/icons.fallback.css"
 ], grunticon.svgLoadedCallback );
 </script>
+<meta name="theme-color" content="#cf2a75" />
 EOL;
 }, 9999);
 
