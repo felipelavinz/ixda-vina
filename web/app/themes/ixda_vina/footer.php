@@ -30,12 +30,12 @@
 						<nav class="social-menu">
 							<ul>
 								<li>
-									<img src="<?php echo get_stylesheet_directory_uri() ?>/img/dist/facebook.svg" class="social-menu__icon" alt="Facebook">
+									<span class="icon icon-facebook" data-grunticon-embed></span>
 									<a href="https://www.facebook.com/groups/ixdavina/">ixdavina</a>
 								</li>
 								<!-- <li><a href=""></a></li> -->
 								<li>
-									<img src="<?php echo get_stylesheet_directory_uri() ?>/img/dist/twitter.svg" class="social-menu__icon" alt="Twitter">
+									<span class="icon icon-twitter" data-grunticon-embed></span>
 									<a href="https://twitter.com/ixda_vina">@ixda_vina</a>
 								</li>
 							</ul>

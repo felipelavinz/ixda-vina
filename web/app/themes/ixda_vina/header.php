@@ -35,10 +35,11 @@
 					'depth'           => 1
 				]);
 			?>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
+				<nav id="site-navigation" class="site-navigation main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 						<span class="sr-only"><?php esc_html_e( 'Menú Principal', 'ixda_vina' ); ?></span>
 						<span class="icon icon-menu" data-grunticon-embed></span>
+						<span class="icon icon-close" data-grunticon-embed></span>
 					</button>
 					<?php
 						wp_nav_menu( [

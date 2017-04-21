@@ -36,7 +36,7 @@
 	line-height: 1.1;
 }
 .feature-secondary__title {
-	font-size: 50px;
+	font-size: 30px;
 	max-width: 18em;
 	display: block;
 }
@@ -94,5 +94,8 @@
 	.feature-secondary {
 		background-size: 100%, contain;
 		background-position: center 25%, center center;
+	}
+	.feature-secondary__title {
+		font-size: 50px;
 	}
 }

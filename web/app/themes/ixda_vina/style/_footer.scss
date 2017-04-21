@@ -3,9 +3,12 @@
 	background-image: linear-gradient(86deg, #00a099, #cf2975 82%, #d8d8d8 120%);
 	background-color: #fff;
 	color: #fff;
-	padding: 50px 0 70px;
 	font-size: 12px;
 	line-height: 1.58;
+	padding: 50px 0 70px;
+	.row > div {
+		margin-bottom: 20px;
+	}
 	a {
 		color: #fff;
 		text-decoration: none;
@@ -15,6 +18,9 @@
 	}
 }
 .social-menu {
+	ul {
+		padding-left: 0;
+	}
 	li {
 		list-style: none;
 		line-height: 24px;
@@ -30,7 +36,7 @@
 	#logo-ixda__grey-text {
 		polygon,
 		path {
-			fill: #fff !important;			
+			fill: #fff !important;
 		}
 	}
 }

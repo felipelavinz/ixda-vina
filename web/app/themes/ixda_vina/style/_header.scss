@@ -16,6 +16,7 @@
 }
 .logo-ixda {
 	position: absolute;
+	display: none;
 }
 .main-menu {
 	font-size: 15px;
@@ -33,29 +34,38 @@
 	width: 45%;
 	height: auto;
 }
+.menu-toggle {
+	border: 0;
+	background: 0;
+	position: absolute;
+	right: ( $grid-gutter-width-base / 2 );
+	top: 18px;
+	padding: 0;
+	display: none;
+}
+.icon-menu {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+}
 @include media-breakpoint-down( sm ) {
 	.menu-toggle {
-		border: 0;
-		background: 0;
-		position: absolute;
-		right: ( $grid-gutter-width-base / 2 );
-		top: 18px;
-		padding: 0;
-	}
-	.icon-menu {
-		display: inline-block;
-		width: 36px;
-		height: 36px;
+		display: block;
+		.icon-menu {
+			display: inline-block;
+		}
+		.icon-close {
+			display: none;
+		}
 	}
 	.main-menu {
 		position: absolute;
-		top: 48px;
-		left: 0;
+		top: 99px;
+		right: 100%;
 		min-width: 100vw;
-		height: 100vh;
 		z-index: 10;
 		background: #fff;
-		display: none;
+		transition: all .15s;
 		a {
 			display: block;
 			padding: 20px;
@@ -65,6 +75,18 @@
 				color: #fff;
 				background: $darkish-pink;
 			}
+		}
+	}
+	.main-menu--toggled {
+		display: block;
+		.main-menu {
+			right: 0%;
+		}
+		.icon-menu {
+			display: none;
+		}
+		.icon-close {
+			display: inline-block;
 		}
 	}
 	.aux-menu {
@@ -122,6 +144,7 @@
 			}
 		}
 	}
+	.logo-ixda,
 	.aux-menu {
 		display: block;
 	}
