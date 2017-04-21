@@ -9,12 +9,13 @@
   "dependencies": {
     "bootstrap": "4.0.0-alpha6",
     "gulp": "^3.9.1",
-    "gulp-iconify": "^0.6.0",
     "gulp-livereload": "^3.8.1",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.5.0",
     "gulp-watch": "^4.3.11",
     "node-sass": "^4.5.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gulpicon": "^1.2.1"
+  }
 }
