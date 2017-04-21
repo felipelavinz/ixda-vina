@@ -241,6 +241,29 @@ class Ixda_Vina_Theme {
 		add_filter('get_the_archive_title', [ $this, 'filter_archive_title'] );
 		add_action('pre_get_posts', [ $this, 'modify_main_query'] );
 		add_filter('acf/fields/google_map/api', [ $this, 'set_google_maps_api_key']);
+		add_filter('nav_menu_css_class', [$this, 'filter_nav_menu_item_class'], 10, 4 );
+	}
+
+	/**
+	 * Filtra las clases del menú principal
+	 * @param  array    $classes Clases del elemento de menú
+	 * @param  WP_Post  $item    Objeto de menú
+	 * @param  stdClass $args    Parámetros de invocación
+	 * @param  int      $depth   Profundidad del menú
+	 * @return array             Clases filtradas
+	 */
+	public function filter_nav_menu_item_class( array $classes, $item, stdClass $args, int $depth ) : array {
+		if ( $args->theme_location != 'main' ) {
+			return $classes;
+		}
+		$active_classes = [
+			'current-post-ancestor',
+			'current-menu-item'
+		];
+		if ( array_intersect( $classes, $active_classes ) ) {
+			$classes[] = 'active';
+		}
+		return $classes;
 	}
 
 	/**
