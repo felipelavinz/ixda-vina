@@ -62,10 +62,18 @@ function ixda_vina_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'ixda_vina_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	// add_theme_support( 'custom-background', apply_filters( 'ixda_vina_custom_background_args', array(
+	// 	'default-color' => 'ffffff',
+	// 	'default-image' => '',
+	// ) ) );
+
+	// add_theme_support('custom-header', [
+	// 	'header-text'        => false,
+	// 	'default-text-color' => '#ffffff',
+	// 	'width'              => 1280,
+	// 	'height'             => 500,
+	// 	'uploads'            => true
+	// ]);
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
@@ -142,37 +150,12 @@ grunticon([
 EOL;
 }, 9999);
 
-add_filter('wp_nav_menu_objects', function( $menu_items, $args ){
-	if ( $args->theme_location !== 'main' ) {
-		return $menu_items;
-	}
-	$items_count = count( $menu_items );
-	$half_count  = floor( $items_count / 2 );
-	$first_half  = array_slice( $menu_items, 0, $half_count );
-	$second_half = array_slice( $menu_items, $half_count );
-	$first_half[] = (object)[
-		'ID'      => 0,
-		'db_id'   => 0,
-		'object'  => 'custom',
-		'type'    => 'custom',
-		'title'   => 'IxDA',
-		'classes' => [ 'logo-ixda' ],
-		'url'     => get_bloginfo('home')
-	];
-	return array_merge( $first_half, $second_half );
-}, 10, 2);
-
 add_filter('walker_nav_menu_start_el', function( $item_output, $item, $depth, $args ){
 	if ( ! in_array('logo-ixda', $item->classes)  ) {
 		return $item_output;
 	}
 	return '<img src="'. get_stylesheet_directory_uri() .'/img/dist/logo-ixda.svg" alt="IxDA Viña del Mar" />';
 }, 10, 4);
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -243,6 +226,33 @@ class Ixda_Vina_Theme {
 		add_action('pre_get_posts', [ $this, 'modify_main_query'] );
 		add_filter('acf/fields/google_map/api', [ $this, 'set_google_maps_api_key']);
 		add_filter('nav_menu_css_class', [$this, 'filter_nav_menu_item_class'], 10, 4 );
+		add_filter('wp_nav_menu_objects', [$this, 'filter_main_menu_items'], 10, 2);
+	}
+
+	/**
+	 * Filtrar elementos del menú principal, para agregar el logo de IxDA Viña en medio
+	 * @param  array    $menu_items Objetos del menú de navegación
+	 * @param  stdClass $args       Parámetros de invocación
+	 * @return array                Objetos de menú, filrados
+	 */
+	public function filter_main_menu_items( array $menu_items, stdClass $args ) : array {
+		if ( $args->theme_location !== 'main' ) {
+			return $menu_items;
+		}
+		$items_count = count( $menu_items );
+		$half_count  = floor( $items_count / 2 );
+		$first_half  = array_slice( $menu_items, 0, $half_count );
+		$second_half = array_slice( $menu_items, $half_count );
+		$first_half[] = (object)[
+			'ID'      => 0,
+			'db_id'   => 0,
+			'object'  => 'custom',
+			'type'    => 'custom',
+			'title'   => 'IxDA',
+			'classes' => [ 'logo-ixda' ],
+			'url'     => get_bloginfo('url')
+		];
+		return array_merge( $first_half, $second_half );
 	}
 
 	/**

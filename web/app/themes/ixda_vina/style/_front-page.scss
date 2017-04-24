@@ -1,5 +1,7 @@
 .feature {
-	background: #576269;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	padding: 2em 0;
 }
 .feature__title {
@@ -97,5 +99,10 @@
 	}
 	.feature-secondary__title {
 		font-size: 50px;
+	}
+}
+@include media-breakpoint-up( md ) {
+	.feature {
+		background-size: auto;
 	}
 }

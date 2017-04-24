@@ -1,9 +1,5 @@
-<?php get_header() ?>
-<div id="feature" class="feature">
-	<div class="container">
-		<span class="feature__title">Un espacio para ampliar el conocimiento de la experiencia de usuario</span>
-	</div>
-</div>
+<?php get_header(); ?>
+<?php get_template_part('partials/front-page__feature'); ?>
 <div id="about" class="about">
 	<div class="container">
 		<div class="row">
