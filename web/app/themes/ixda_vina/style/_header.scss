@@ -58,14 +58,32 @@
 			display: none;
 		}
 	}
+	.js {
+		.menu-principal-container {
+			position: relative;
+		}
+		.main-menu {
+			position: absolute;
+			top: 0;
+			width: 100vw;
+			left: 100vw;
+			z-index: 15;
+			height: auto;
+		}
+		.main-menu--toggled {
+			.main-menu {
+				left: - ( $grid-gutter-width-base / 2 );
+			}
+		}
+	}
 	.main-menu {
-		position: absolute;
+		height: 0;
 		top: 99px;
-		right: 100%;
-		min-width: 100vw;
+		width: 100%;
 		z-index: 10;
 		background: #fff;
-		transition: all .15s;
+		transition: all .25s;
+		overflow: hidden;
 		a {
 			display: block;
 			padding: 20px;
@@ -80,7 +98,7 @@
 	.main-menu--toggled {
 		display: block;
 		.main-menu {
-			right: 0%;
+			height: auto;
 		}
 		.icon-menu {
 			display: none;
@@ -93,9 +111,14 @@
 		display: none;
 	}
 }
-@include media-breakpoint-up( sm ) {
+@include media-breakpoint-up( md ) {
 	.logo-ixda--mobile {
 		display: none;
+	}
+	.logo-ixda {
+		position: absolute;
+		top: 20px;
+		padding: 0 !important;
 	}
 	.site-header {
 		position: relative;
@@ -117,8 +140,9 @@
 		justify-content: space-between;
 		width: 100%;
 		li {
+			padding: 47px 0 43px;
 			flex-basis: auto;
-			padding: 37px 0 53px;
+			// padding: 37px 0 53px;
 		}
 		.active {
 			position: relative;
@@ -143,28 +167,16 @@
 				border-left: 50px solid transparent;
 			}
 		}
-	}
-	.logo-ixda,
-	.aux-menu {
-		display: block;
-	}
-}
-@include media-breakpoint-up( md ) {
-	.logo-ixda {
-		position: absolute;
-		top: 20px;
-		padding: 0 !important;
-	}
-	.main-menu {
-		li {
-			padding: 47px 0 43px;
-		}
 		.current-menu-item {
 			&:after,
 			&:before {
 				bottom: 6px;
 			}
 		}
+	}
+	.logo-ixda,
+	.aux-menu {
+		display: block;
 	}
 }
 @include media-breakpoint-up( lg ) {
