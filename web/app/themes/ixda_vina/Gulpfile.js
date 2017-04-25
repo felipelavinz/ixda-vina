@@ -3,7 +3,6 @@
 	var gulp = require('gulp'),
 		sass = require('gulp-sass'),
 		livereload = require('gulp-livereload'),
-		// iconify = require('gulp-iconify'),
 		gulpicon = require('gulpicon/tasks/gulpicon'),
 		glob = require('glob'),
 		sourcemaps = require('gulp-sourcemaps');

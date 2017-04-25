@@ -48,12 +48,12 @@
         "php": ">=5.6",
         "composer/installers": "~1.0.12",
         "vlucas/phpdotenv": "^2.0.1",
-        "johnpbloch/wordpress": "4.7.3",
         "oscarotero/env": "^1.0",
         "roots/wp-password-bcrypt": "1.0.0",
         "wpackagist-plugin/wordpress-seo": "^4.5",
         "gutenpress/gutenpress": "dev-master",
-        "wpackagist-plugin/advanced-custom-fields": "^4.4"
+        "wpackagist-plugin/advanced-custom-fields": "^4.4",
+        "johnpbloch/wordpress": "4.7.4"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.5.1",
