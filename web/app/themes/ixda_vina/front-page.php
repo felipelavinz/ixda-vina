@@ -4,14 +4,22 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6">
-				<h2 class="like-title">Somos IxDA Viña del Mar</h2>
-				<p>Somos representantes de Viña del Mar dentro de IxDA Chile y Latinoamerica. Conformamos este grupo en el año 2015 con la finalidad de dar a conocer la disciplina de la UX en Chile y profundizar en los conocimientos y metdologías de esta área del diseño.</p>
-				<a href="#" class="see-more btn btn-ghost btn-default">Leer más</a>
+				<h2 class="like-title about__about-title"><?php echo get_theme_mod('about_about_title', 'Somos IxDA Viña del Mar'); ?></h2>
+				<div class="about__about-description">
+					<?php echo wpautop( wptexturize( get_theme_mod('about_about_description') ) ); ?>
+				</div>
+				<?php if ( get_theme_mod('about_about_url') ) : ?>
+				<a href="<?php echo esc_url( get_theme_mod('about_about_url') ); ?>" class="see-more btn btn-ghost btn-default">Leer más</a>
+				<?php endif; ?>
 			</div>
 			<div class="col-sm-6">
-				<h2 class="like-title">Equipo IxDA Viña del Mar</h2>
-				<p>Somos representantes de Viña del Mar dentro de IxDA Chile y Latinoamerica. Conformamos este grupo en el año 2015 con la finalidad de dar a conocer la disciplina de la UX en Chile y profundizar en los conocimientos y metdologías de esta área del diseño.</p>
-				<a href="#" class="see-more btn btn-ghost btn-default">Leer más</a>
+				<h2 class="like-title about__team-title"><?php echo get_theme_mod('about_team_title', 'Equipo IxDA Viña del Mar'); ?></h2>
+				<div class="about__team-description">
+					<?php echo wpautop( wptexturize( get_theme_mod('about_team_description') ) ); ?>
+				</div>
+				<?php if ( get_theme_mod('about_team_url') ) : ?>
+				<a href="<?php echo esc_url( get_theme_mod('about_team_url') ); ?>" class="see-more btn btn-ghost btn-default">Leer más</a>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>

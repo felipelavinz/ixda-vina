@@ -5,8 +5,6 @@
 	<div class="container">
 	<?php if ( get_theme_mod('main_feature_text') ) : ?>
 		<span class="feature__title"><?php echo get_theme_mod('main_feature_text') ?></span>
-	<?php else : ?>
-		<span class="feature__title">Un espacio para ampliar el conocimiento de la experiencia de usuario</span>
 	<?php endif; ?>
 	</div>
 </div>
