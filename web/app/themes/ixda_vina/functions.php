@@ -129,6 +129,10 @@ function ixda_vina_scripts() {
 
 	wp_enqueue_script( 'ixda_vina-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
+	if ( is_front_page() ) {
+		wp_enqueue_script( 'posts-loader', get_template_directory_uri() .'/js/load-posts.js', array('jquery', 'underscore'), '', true );
+	}
+
 	// wp_enqueue_script( 'ixda_vina-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

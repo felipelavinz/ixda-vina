@@ -48,7 +48,7 @@
 		<h2>Últimas Publicaciones</h2>
 	</header>
 	<div class="container">
-		<div class="row">
+		<div id="articles__receiver" class="row">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<div class="col-sm-6">
 				<?php get_template_part('partials/list-article') ?>
@@ -61,7 +61,31 @@
 			</div>
 		</div>
 	</div>
-	<!-- cargar más -->
+<script type="text/template" id="list-article__template">
+<div class="col-sm-6">
+	<article class="list-entry--has-post-thumbnail">
+		<% if ( _embedded['wp:featuredmedia'] ) { %>
+			<img src="<%= _embedded['wp:featuredmedia'][0].media_details.sizes['post-thumbnail'].source_url %>" class="list-entry__image wp-post-image" alt="" width="200" height="135">
+		<% } %>
+		<h2 class="entry-title list-entry__title">
+			<a href="<%= link %>"><%= title.rendered %></a>
+		</h2>
+		<div class="list-entry__meta entry__meta">
+			<span class="list-entry__published entry-published">
+				<%= date %>
+			</span>
+			<span class="list-entry__category entry__category">
+			</span>
+			<p class="list-entry__author entry__author">
+				<span>Autor:</span>
+			</p>
+		</div>
+		<div class="entry-summary list-entry__summary">
+			<%= excerpt.rendered %>
+		</div>
+	</article>
+</div>
+</script>
 </section>
 <?php endif; ?>
 <?php get_template_part('partials/subscribe'); ?>
