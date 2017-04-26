@@ -1,4 +1,3 @@
-<!-- tiene imagen? -->
 <div class="container">
 	<article <?php post_class('the-post single-post') ?>>
 		<header class="single-post__header">
@@ -13,13 +12,13 @@
 					<div class="col-sm-4 single-post__share">
 						<nav class="single-post__share">
 							<button class="single-post__share-icon" id="single-post__share-linkedin" title="Compartir en LinkedIn">
-								<?php include TEMPLATEPATH .'/img/dist/linkedin.svg'; ?>
+								<span class="icon icon-linkedin" data-grunticon-embed></span>
 							</button>
 							<button class="single-post__share-icon" id="single-post__share-twitter" title="Compartir en Twitter">
-								<?php include TEMPLATEPATH .'/img/dist/twitter.svg'; ?>
+								<span class="icon icon-twitter" data-grunticon-embed></span>
 							</button>
 							<button class="single-post__share-icon" id="single-post__share-facebook">
-								<?php include TEMPLATEPATH .'/img/dist/facebook.svg'; ?>
+								<span class="icon icon-facebook" data-grunticon-embed></span>
 							</button>
 						</nav>
 					</div>
