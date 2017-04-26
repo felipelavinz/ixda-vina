@@ -65,14 +65,14 @@
 </section>
 <?php endif; ?>
 <?php get_template_part('partials/subscribe'); ?>
-<?php if ( ixda_has_events() ) : ?>
+<?php if ( $events = ixda_has_events() ) : ?>
 <section id="events">
 	<header class="events__section-title section-title">
 		<h2>Agenda</h2>
 	</header>
 	<div class="container">
 		<div class="row">
-			<?php foreach ( ixda_has_events() as $event ) : ?>
+			<?php foreach ( $events as $event ) : ?>
 				<div class="col-sm-4">
 					<article class="vevent event">
 						<header class="event__header">
@@ -95,18 +95,20 @@
 </section>
 <?php endif; ?>
 <?php get_template_part('partials/front-page__job-board'); ?>
-<?php if ( ixda_has_partners() ) : ?>
+<?php if ( $partners = ixda_has_partners() ) : ?>
 <section id="partners">
 	<header class="partners__section-header">
 		<h2 class="section-title">Partners</h2>
 	</header>
 	<div class="container">
 		<div class="row">
-		<?php for ( $i = 0; $i < 4; $i++ ) : ?>
-			<div class="col-md-3">
-				{Logo goes here}
+		<?php foreach ( $partners as $partner ) : ?>
+			<div class="col-6 col-md-3">
+				<div class="partner">
+					<?php the_post_thumbnail('partner-logo') ?>
+				</div>
 			</div>
-		<?php endfor; ?>
+		<?php endforeach; ?>
 		</div>
 	</div>
 </section>

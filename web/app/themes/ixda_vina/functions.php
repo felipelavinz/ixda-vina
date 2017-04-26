@@ -81,6 +81,7 @@ function ixda_vina_setup() {
 	// Configure default post thumbnail size
 	set_post_thumbnail_size( 200, 135, true );
 
+	add_image_size('partner-logo', 375, 375, true );
 	add_image_size('single-post__hero', 960, 650, true );
 	add_image_size('single-post__hero--lg', 1070, 725, true);
 	add_image_size('single-post__hero--sm', 768, 520, true);
@@ -200,7 +201,12 @@ function ixda_has_jobs() {
  * @todo
  */
 function ixda_has_partners() {
-	return true;
+	static $partners;
+	$partners = new Partner_Post_Query([
+		'posts_per_page' => 4,
+		'orderby'        => 'rand'
+	]);
+	return count( $partners ) > 0 ? $partners : false;
 }
 
 /**
