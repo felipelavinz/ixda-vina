@@ -61,34 +61,7 @@
 			</div>
 		</div>
 	</div>
-<script type="text/template" id="list-article__template">
-<div class="col-sm-6">
-	<article class="list-entry <% if ( _embedded['wp:featuredmedia'] ) { %>list-entry--has-post-thumbnail<% } %>">
-		<% if ( _embedded['wp:featuredmedia'] ) { %>
-			<img src="<%= _embedded['wp:featuredmedia'][0].media_details.sizes['post-thumbnail'].source_url %>" class="list-entry__image wp-post-image" alt="" width="200" height="135">
-		<% } %>
-		<h2 class="entry-title list-entry__title">
-			<a href="<%= link %>"><%= title.rendered %></a>
-		</h2>
-		<div class="list-entry__meta entry__meta">
-			<span class="list-entry__published entry-published">
-				<%= date %>
-			</span>
-			<span class="list-entry__category entry__category">
-			</span>
-			<% if ( _embedded.author ) { %>
-			<p class="list-entry__author entry__author">
-				<span>Autor:</span>
-				<%= _embedded.author[0].name %>
-			</p>
-			<% } %>
-		</div>
-		<div class="entry-summary list-entry__summary">
-			<%= excerpt.rendered %>
-		</div>
-	</article>
-</div>
-</script>
+<?php get_template_part('partials/list-article', 'underscore_js'); ?>
 </section>
 <?php endif; ?>
 <?php get_template_part('partials/subscribe'); ?>
