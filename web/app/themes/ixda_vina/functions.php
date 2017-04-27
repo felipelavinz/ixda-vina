@@ -131,6 +131,9 @@ function ixda_vina_scripts() {
 
 	if ( is_front_page() ) {
 		wp_enqueue_script( 'posts-loader', get_template_directory_uri() .'/js/load-posts.js', array('jquery', 'underscore'), '', true );
+		wp_localize_script( 'posts-loader', 'ixda_loader', [
+			'wp_json' => home_url('/wp-json/wp/v2/posts')
+		] );
 	}
 
 	// wp_enqueue_script( 'ixda_vina-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

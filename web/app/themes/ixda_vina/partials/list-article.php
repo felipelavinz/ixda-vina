@@ -1,4 +1,4 @@
-<article <?php post_class( has_post_thumbnail() ? 'list-entry--has-post-thumbnail' : 'list-entry' ) ?>>
+<article <?php post_class( has_post_thumbnail() ? 'list-entry--has-post-thumbnail list-entry' : 'list-entry' ) ?>>
 	<?php the_post_thumbnail('post-thumbnail', ['class' => is_archive() ? 'archive-entry__image' : 'list-entry__image']); ?>
 	<h2 class="entry-title list-entry__title">
 		<a href="<?php the_permalink() ?>"><?php the_title() ?></a>
