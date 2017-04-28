@@ -54,7 +54,7 @@
         "gutenpress/gutenpress": "dev-master",
         "wpackagist-plugin/advanced-custom-fields": "^4.4",
         "johnpbloch/wordpress": "4.7.4",
-        "wpackagist-plugin/mailgun": "1.5.8.2"
+        "wpackagist-plugin/wp-mail-smtp": "^0.10.1"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.5.1",
