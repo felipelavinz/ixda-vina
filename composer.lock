@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cdb2da337dbf5c7b8f8b2f3abe9652e2",
-    "content-hash": "f22944361d47c43b3c8c8b013ed59dc6",
+    "hash": "723cbe811864557b172b67a9849305ec",
+    "content-hash": "e36625213b74fd49a3b3d954ca69a8d4",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -706,6 +706,26 @@
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
         },
         {
+            "name": "wpackagist-plugin/jetpack",
+            "version": "4.9-beta1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/jetpack/",
+                "reference": "tags/4.9-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.4.9-beta1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/jetpack/"
+        },
+        {
             "name": "wpackagist-plugin/wordpress-seo",
             "version": "4.6",
             "source": {
@@ -736,7 +756,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.0.10.1.zip",
-                "reference": null,
+                "reference": "tags/0.10.1",
                 "shasum": null
             },
             "require": {
