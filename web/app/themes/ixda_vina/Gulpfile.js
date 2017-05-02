@@ -16,6 +16,15 @@
 			.pipe( livereload() );
 	});
 
+	gulp.task('editor_style', function(){
+		return gulp.src('./style/editor-style.scss')
+			.pipe( sourcemaps.init() )
+			.pipe( sass().on('error', sass.logError)  )
+			.pipe( sourcemaps.write('.') )
+			.pipe( gulp.dest('./style/') )
+			.pipe( livereload() );
+	});
+
 	gulp.task('svgmin', function(){
 		return gulp.src('./img/src/*.svg')
 			.pipe(svgmin())

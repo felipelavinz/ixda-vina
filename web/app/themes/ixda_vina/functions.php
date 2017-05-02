@@ -78,6 +78,9 @@ function ixda_vina_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+	add_editor_style( '//fonts.googleapis.com/css?family=Roboto:400,400i,700,700i' );
+	add_editor_style( 'style/editor-style.css' );
+
 	// Configure default post thumbnail size
 	set_post_thumbnail_size( 200, 135, true );
 

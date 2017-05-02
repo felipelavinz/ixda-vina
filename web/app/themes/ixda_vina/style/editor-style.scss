@@ -1,0 +1,40 @@
+/*!
+ * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
+ * Copyright 2011-2017 The Bootstrap Authors
+ * Copyright 2011-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/custom";
+
+// Reset and dependencies
+@import "../node_modules/bootstrap/scss/normalize";
+
+// Core CSS
+@import "../node_modules/bootstrap/scss/reboot";
+// @import "../node_modules/bootstrap/scss/type";
+// @import "../node_modules/bootstrap/scss/images";
+// @import "../node_modules/bootstrap/scss/code";
+// @import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+// @import "../node_modules/bootstrap/scss/forms";
+// @import "../node_modules/bootstrap/scss/buttons";
+
+// Components
+@import "../node_modules/bootstrap/scss/responsive-embed";
+
+// Utility classes
+// @import "../node_modules/bootstrap/scss/utilities";
+
+.mce-content-body {
+	max-width: 760px;
+	margin: 2em auto;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+@import "std-text";
+@include std-text;
