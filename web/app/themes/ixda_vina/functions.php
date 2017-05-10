@@ -239,6 +239,23 @@ class Ixda_Vina_Theme {
 		add_filter('acf/fields/google_map/api', [ $this, 'set_google_maps_api_key']);
 		add_filter('nav_menu_css_class', [$this, 'filter_nav_menu_item_class'], 10, 4 );
 		add_filter('wp_nav_menu_objects', [$this, 'filter_main_menu_items'], 10, 2);
+		add_filter('get_the_excerpt', [$this, 'get_real_excerpt'], 10, 2);
+	}
+
+	/**
+	 * Obtener un extracto real, incluso para entradas sindicadas
+	 * @param  string  $excerpt Supuesto extracto de la entrada
+	 * @param  WP_Post $post    Entrada
+	 * @return string           Extracto real u obtenido del contenido de la entrada
+	 */
+	public function get_real_excerpt( string $excerpt, WP_Post $post ) : string {
+		if ( ixda_has_own_excerpt( $post ) ) {
+			return $excerpt;
+		}
+		$excerpt = strip_shortcodes( $post->post_content );
+		$excerpt = wp_strip_all_tags( $excerpt );
+		$excerpt = wp_trim_words( $excerpt, 55, '&hellip;' );
+		return wpautop( wptexturize( $excerpt ) );
 	}
 
 	/**
@@ -330,3 +347,38 @@ class Ixda_Vina_Theme {
 (function(){
 	( new Ixda_Vina_Theme )->init();
 })();
+
+/**
+ * Indica si un post tiene excerpt y es distinto del contenido
+ * @param  WP_Post|int $postid ID del post u objeto de post. Default: global $post
+ * @return bool         		Verdadero si tiene extracto y es disinto distinto del contenido
+ */
+function ixda_has_own_excerpt( $postid = null ) : bool {
+	if ( ! $postid ) {
+		global $post;
+		$postid = $post;
+	}
+	$the_post       = get_post( $postid );
+	$has_excerpt    = has_excerpt( $the_post );
+	if ( ! has_excerpt() ) {
+		return false;
+	}
+	$sample_size    = 128;
+	$sample_content = ixda__hash_string_sample( $the_post->post_content );
+	$sample_excerpt = ixda__hash_string_sample( $the_post->post_excerpt );
+	return ! $sample_content == $sample_excerpt;
+}
+
+/**
+ * Calcular un hash a partir de una muestra de texto
+ * @param  string  $text        El texto de input
+ * @param  int     $sample_size La extensión del texto que se ve a a considerar para calcular el hash
+ * @return string               Hash del extracto de texto
+ */
+function ixda__hash_string_sample( string $text, $sample_size = 128 ) : string {
+	$text = wp_strip_all_tags( $text, true );
+	$text = trim( $text );
+	$text = function_exists('mb_strtolower') ? mb_strtolower( $text ) : strtolower( $text );
+	$text = substr( $text, 0, $sample_size );
+	return sha1( $text );
+}

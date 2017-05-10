@@ -25,7 +25,7 @@
 				</div>
 			</div>
 		</header>
-		<?php if ( has_excerpt() ) :  ?>
+		<?php if ( ixda_has_own_excerpt() ) :  ?>
 		<div class="entry-summary single-post__summary">
 			<?php the_excerpt(); ?>
 		</div>
