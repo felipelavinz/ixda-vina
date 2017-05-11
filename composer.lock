@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "723cbe811864557b172b67a9849305ec",
-    "content-hash": "e36625213b74fd49a3b3d954ca69a8d4",
+    "hash": "b16a01861637c39e45d36fcf9f35dc96",
+    "content-hash": "e838140598a564f2458e2ebab2937fda",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -706,16 +706,37 @@
             "homepage": "https://wordpress.org/plugins/advanced-custom-fields/"
         },
         {
-            "name": "wpackagist-plugin/jetpack",
-            "version": "4.9-beta1",
+            "name": "wpackagist-plugin/feedwordpress",
+            "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/4.9-beta1"
+                "url": "https://plugins.svn.wordpress.org/feedwordpress/",
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.4.9-beta1.zip",
+                "url": "https://downloads.wordpress.org/plugin/feedwordpress.zip?timestamp=1481638124",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/feedwordpress/",
+            "time": "2016-12-13 14:08:44"
+        },
+        {
+            "name": "wpackagist-plugin/jetpack",
+            "version": "4.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/jetpack/",
+                "reference": "tags/4.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.4.9.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -727,16 +748,16 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "4.6",
+            "version": "4.7.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/4.6"
+                "reference": "tags/4.7.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.4.6.zip",
-                "reference": "tags/4.6",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.4.7.1.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -785,7 +806,7 @@
                 "ext-simplexml": "*",
                 "ext-tokenizer": "*",
                 "ext-xmlwriter": "*",
-                "php": ">=5.1.2"
+                "php": ">=5.4.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.0"
@@ -889,7 +910,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "gutenpress/gutenpress": 20
+        "gutenpress/gutenpress": 20,
+        "wpackagist-plugin/feedwordpress": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
