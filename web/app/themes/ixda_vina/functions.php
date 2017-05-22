@@ -145,6 +145,10 @@ function ixda_vina_scripts() {
 		] );
 	}
 
+	if ( is_single() ) {
+		wp_enqueue_script( 'ixda_vina-share', get_template_directory_uri() .'/js/share.js', [ 'jquery' ], '0.1.0', true );
+	}
+
 	// wp_enqueue_script( 'ixda_vina-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -415,6 +419,11 @@ function ixda_twitter_share( $post = null ) : string {
 	return add_query_arg( $args, 'https://twitter.com/intent/tweet' );
 }
 
+/**
+ * Obtener link para compartir en Facebook
+ * @param  WP_Post|int $post Post
+ * @return string            URL para compartir en Facebook
+ */
 function ixda_facebook_share( $post = null ) : string {
 	$post = get_post( $post );
 	$args = [
