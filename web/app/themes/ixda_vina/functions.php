@@ -408,8 +408,9 @@ function ixda_linkedin_share( $post = null ) : string {
 function ixda_twitter_share( $post = null ) : string {
 	$post = get_post( $post );
 	$args = [
-		'url'      => get_permalink( $post ),
-		'via'      => 'ixda_vina'
+		'url'  => get_permalink( $post ),
+		'via'  => 'ixda_vina',
+		'text' => get_the_title( $post )
 	];
 	return add_query_arg( $args, 'https://twitter.com/intent/tweet' );
 }
@@ -419,5 +420,5 @@ function ixda_facebook_share( $post = null ) : string {
 	$args = [
 		'u' => get_permalink( $post )
 	];
-	return add_query_arg( $arg, 'https://www.facebook.com/sharer/sharer.php' );
+	return add_query_arg( $args, 'https://www.facebook.com/sharer/sharer.php' );
 }
