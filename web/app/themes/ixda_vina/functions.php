@@ -382,3 +382,42 @@ function ixda__hash_string_sample( string $text, $sample_size = 128 ) : string {
 	$text = substr( $text, 0, $sample_size );
 	return sha1( $text );
 }
+
+/**
+ * Obtener el link para compartir en LinkedIn
+ * @param  WP_Post|int $post Post
+ * @return string        URL para compartir en LinkedIn
+ */
+function ixda_linkedin_share( $post = null ) : string {
+	$post = get_post( $post );
+	$args = [
+		'url'     => get_permalink( $post ),
+		'mini'    => 'true',
+		'title'   => get_the_title( $post ),
+		'summary' => wp_strip_all_tags( get_the_excerpt( $post ) ),
+		'source'  => get_bloginfo('name')
+	];
+	return add_query_arg( $args, 'https://www.linkedin.com/shareArticle' );
+}
+
+/**
+ * Obtener link para compartir en Twitter
+ * @param  WP_Post|int $post Post
+ * @return string            URL para compartir en Twitter
+ */
+function ixda_twitter_share( $post = null ) : string {
+	$post = get_post( $post );
+	$args = [
+		'url'      => get_permalink( $post ),
+		'via'      => 'ixda_vina'
+	];
+	return add_query_arg( $args, 'https://twitter.com/intent/tweet' );
+}
+
+function ixda_facebook_share( $post = null ) : string {
+	$post = get_post( $post );
+	$args = [
+		'u' => get_permalink( $post )
+	];
+	return add_query_arg( $arg, 'https://www.facebook.com/sharer/sharer.php' );
+}

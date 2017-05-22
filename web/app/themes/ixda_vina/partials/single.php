@@ -11,15 +11,15 @@
 					</div>
 					<div class="col-md-4 single-post__share">
 						<nav class="single-post__share">
-							<button class="single-post__share-icon" id="single-post__share-linkedin" title="Compartir en LinkedIn">
+							<a class="single-post__share-icon" id="single-post__share-linkedin" title="Compartir en LinkedIn" href="<?php echo esc_url( ixda_linkedin_share() ); ?>">
 								<span class="icon icon-linkedin" data-grunticon-embed></span>
-							</button>
-							<button class="single-post__share-icon" id="single-post__share-twitter" title="Compartir en Twitter">
+							</a>
+							<a class="single-post__share-icon" id="single-post__share-twitter" title="Compartir en Twitter" href="<?php echo esc_url( ixda_twitter_share() ); ?>">
 								<span class="icon icon-twitter" data-grunticon-embed></span>
-							</button>
-							<button class="single-post__share-icon" id="single-post__share-facebook">
+							</a>
+							<a class="single-post__share-icon" id="single-post__share-facebook" href="<?php echo esc_url( ixda_facebook_share() ); ?>">
 								<span class="icon icon-facebook" data-grunticon-embed></span>
-							</button>
+							</a>
 						</nav>
 					</div>
 				</div>
