@@ -40,6 +40,7 @@
 }
 .single-post__share {
 	text-align: right;
+	margin-top: 1em;
 }
 .single-post__share-icon {
 	border: none;
@@ -48,8 +49,8 @@
 	height: 36px;
 	padding: 0;
 	svg {
-		width: 36px;
-		height: 36px;
+		width: 20px;
+		height: 20px;
 	}
 	path {
 		fill: $darkish-pink !important;
@@ -89,6 +90,15 @@
 	}
 	.single-post__summary {
 		font-size: $font-size-h3;
+	}
+	.single-post__share {
+		margin-top: 0;
+	}
+	.single-post__share-icon {
+		svg {
+			width: 36px;
+			height: 36px;
+		}
 	}
 }
 @include media-breakpoint-up( md ) {

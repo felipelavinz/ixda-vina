@@ -5,11 +5,11 @@
 			<div class="single-post__header-text<?php echo has_post_thumbnail() ? ' single-post__header-text--has-image' : ''; ?>">
 				<h1 class="entry-title single-post__title"><?php the_title(); ?></h1>
 				<div class="row">
-					<div class="col-sm-8 single-post__meta">
+					<div class="col-md-8 single-post__meta">
 						<p><?php the_time('F Y') ?> | <?php echo get_the_category_list(', ') ?></p>
 						<p>Autor: <?php the_author_link(); ?></p>
 					</div>
-					<div class="col-sm-4 single-post__share">
+					<div class="col-md-4 single-post__share">
 						<nav class="single-post__share">
 							<button class="single-post__share-icon" id="single-post__share-linkedin" title="Compartir en LinkedIn">
 								<span class="icon icon-linkedin" data-grunticon-embed></span>
