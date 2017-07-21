@@ -50,17 +50,17 @@
         "vlucas/phpdotenv": "^2.0.1",
         "oscarotero/env": "^1.0",
         "roots/wp-password-bcrypt": "1.0.0",
-        "wpackagist-plugin/wordpress-seo": "^4.5",
+        "wpackagist-plugin/wordpress-seo": "^5.0",
         "gutenpress/gutenpress": "dev-master",
         "wpackagist-plugin/advanced-custom-fields": "^4.4",
-        "johnpbloch/wordpress": "4.7.5",
+        "johnpbloch/wordpress": "4.8",
         "wpackagist-plugin/wp-mail-smtp": "^0.10.1",
-        "wpackagist-plugin/jetpack": "^4.8",
+        "wpackagist-plugin/jetpack": "^5.1",
         "wpackagist-plugin/feedwordpress": "dev-trunk"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.5.1",
-        "wpackagist-plugin/debug-bar": "^0.8.4",
+        "wpackagist-plugin/debug-bar": "^0.9",
         "wpackagist-plugin/query-monitor": "^2.13"
     },
     "minimum-stability": "dev",
