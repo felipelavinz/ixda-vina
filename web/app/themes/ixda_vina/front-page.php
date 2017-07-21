@@ -29,14 +29,14 @@
 		<div class="row">
 			<div class="col-sm-11">
 				<span class="feature-secondary__title">
-					“48% OF USERS SAY THAT IF A WEBSITE DOESN´T WORK WELL ON MOBILE, THEY INTERPRET IT AS THE BUSINESS SIMPLY NOT CARING”
+					<?php echo get_theme_mod('secondary_feature_text', '“48% OF USERS SAY THAT IF A WEBSITE DOESN´T WORK WELL ON MOBILE, THEY INTERPRET IT AS THE BUSINESS SIMPLY NOT CARING”'); ?>
 				</span>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-12">
 				<span class="feature-secondary__description">
-					7 UX DESIGN TRENDS: THAT WILL RULE THE ROOST IN 2016
+					<?php echo get_theme_mod('secondary_feature_cite', '7 UX DESIGN TRENDS: THAT WILL RULE THE ROOST IN 2016') ?>					
 				</span>
 			</div>
 		</div>
