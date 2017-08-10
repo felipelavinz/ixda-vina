@@ -175,7 +175,10 @@ add_filter('walker_nav_menu_start_el', function( $item_output, $item, $depth, $a
 	if ( ! in_array('logo-ixda', $item->classes)  ) {
 		return $item_output;
 	}
-	return '<img src="'. get_stylesheet_directory_uri() .'/img/dist/logo-ixda.svg" alt="IxDA Viña del Mar" />';
+	$out  = '<a href="'. $item->url .'" title="Volver al inicio" rel="index">';
+	$out .= '<img src="'. get_stylesheet_directory_uri() .'/img/dist/logo-ixda.svg" alt="IxDA Viña del Mar" />';
+	$out .= '</a>';
+	return $out;
 }, 10, 4);
 
 /**
