@@ -24,7 +24,7 @@
 	<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'ixda_vina' ); ?></a>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
-			<a href="<?php echo site_url('/') ?>" title="Volver al inicio" rel="index">
+			<a href="<?php echo get_bloginfo('url') ?>" title="Volver al inicio" rel="index">
 				<img class="logo-ixda--mobile visible-xs" src="<?php echo get_stylesheet_directory_uri() ?>/img/dist/logo-ixda.svg" alt="IxDA Viña del Mar" />
 			</a>
 			<?php
