@@ -31,7 +31,7 @@
 							<ul>
 								<li>
 									<span class="icon icon-facebook" data-grunticon-embed></span>
-									<a href="https://www.facebook.com/groups/ixdavina/">ixdavina</a>
+									<a href="https://www.facebook.com/ixdavina/">ixdavina</a>
 								</li>
 								<!-- <li><a href=""></a></li> -->
 								<li>
