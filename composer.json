@@ -53,7 +53,7 @@
         "wpackagist-plugin/wordpress-seo": "^5.0",
         "gutenpress/gutenpress": "dev-master",
         "wpackagist-plugin/advanced-custom-fields": "^4.4",
-        "johnpbloch/wordpress": "4.8.1",
+        "johnpbloch/wordpress": "4.9.5",
         "wpackagist-plugin/wp-mail-smtp": "^0.10.1",
         "wpackagist-plugin/jetpack": "^5.1",
         "wpackagist-plugin/feedwordpress": "dev-trunk"

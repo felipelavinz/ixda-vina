@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9fb0d5c8d5b1a175c43bf1f917d1dc29",
-    "content-hash": "090871df3b4b02f80ad6cecbae749176",
+    "content-hash": "d936c350411dd41cd919e284002ac75d",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -52,7 +51,7 @@
                 "laravel",
                 "toolkit"
             ],
-            "time": "2015-12-21 09:20:38"
+            "time": "2015-12-21T09:20:38+00:00"
         },
         {
             "name": "composer/installers",
@@ -60,12 +59,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b"
+                "reference": "5d15e4e9aab1da3a622678bdaaa4f7d57d150923"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
-                "reference": "9ce17fb70e9a38dd8acff0636a29f5cf4d575c1b",
+                "url": "https://api.github.com/repos/composer/installers/zipball/5d15e4e9aab1da3a622678bdaaa4f7d57d150923",
+                "reference": "5d15e4e9aab1da3a622678bdaaa4f7d57d150923",
                 "shasum": ""
             },
             "require": {
@@ -77,7 +76,7 @@
             },
             "require-dev": {
                 "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "4.1.*"
+                "phpunit/phpunit": "^4.8.36"
             },
             "type": "composer-plugin",
             "extra": {
@@ -148,15 +147,18 @@
                 "lavalite",
                 "lithium",
                 "magento",
+                "majima",
                 "mako",
                 "mediawiki",
                 "modulework",
+                "modx",
                 "moodle",
                 "osclass",
                 "phpbb",
                 "piwik",
                 "ppi",
                 "puppet",
+                "pxcms",
                 "reindex",
                 "roundcube",
                 "shopware",
@@ -169,32 +171,33 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2017-08-09 07:53:48"
+            "time": "2018-04-05T19:08:21+00:00"
         },
         {
             "name": "doctrine/inflector",
-            "version": "1.2.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462"
+                "reference": "89aedcb9b2a568efdd2ab376e0f60f428c977858"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/e11d84c6e018beedd929cff5220969a3c6d1d462",
-                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/89aedcb9b2a568efdd2ab376e0f60f428c977858",
+                "reference": "89aedcb9b2a568efdd2ab376e0f60f428c977858",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": "^7.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.2"
+                "doctrine/coding-standard": "^3.0",
+                "phpunit/phpunit": "^7.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
@@ -236,7 +239,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2017-07-22 12:18:28"
+            "time": "2018-04-11T05:54:08+00:00"
         },
         {
             "name": "gutenpress/forms",
@@ -275,7 +278,7 @@
                 "source": "https://github.com/felipelavinz/gutenpress-forms/tree/master",
                 "issues": "https://github.com/felipelavinz/gutenpress-forms/issues"
             },
-            "time": "2017-04-02 20:55:16"
+            "time": "2017-04-02T20:55:16+00:00"
         },
         {
             "name": "gutenpress/gutenpress",
@@ -283,15 +286,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/felipelavinz/gutenpress-core.git",
-                "reference": "6a35b6b78d6bad2e1e65d46519d00f65cdf26744"
+                "reference": "fd59a2144b5cc80121983e7b7525656aab38be02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/felipelavinz/gutenpress-core/zipball/6a35b6b78d6bad2e1e65d46519d00f65cdf26744",
-                "reference": "6a35b6b78d6bad2e1e65d46519d00f65cdf26744",
+                "url": "https://api.github.com/repos/felipelavinz/gutenpress-core/zipball/fd59a2144b5cc80121983e7b7525656aab38be02",
+                "reference": "fd59a2144b5cc80121983e7b7525656aab38be02",
                 "shasum": ""
             },
             "require": {
+                "composer/installers": "~1.0",
                 "gutenpress/forms": "@dev",
                 "gutenpress/helpers": "@dev"
             },
@@ -315,7 +319,7 @@
                 "source": "https://github.com/felipelavinz/gutenpress-core/tree/master",
                 "issues": "https://github.com/felipelavinz/gutenpress-core/issues"
             },
-            "time": "2017-04-02 20:50:34"
+            "time": "2017-08-16T20:29:28+00:00"
         },
         {
             "name": "gutenpress/helpers",
@@ -354,24 +358,24 @@
                 "source": "https://github.com/felipelavinz/gutenpress-helpers/tree/master",
                 "issues": "https://github.com/felipelavinz/gutenpress-helpers/issues"
             },
-            "time": "2017-04-02 20:55:47"
+            "time": "2017-04-02T20:55:47+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.8.1",
+            "version": "4.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "75bbc8dade6d66b66c7184656df7b3d545d31baa"
+                "reference": "c0d69bde6fc373270766a00db333c64f35496d67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/75bbc8dade6d66b66c7184656df7b3d545d31baa",
-                "reference": "75bbc8dade6d66b66c7184656df7b3d545d31baa",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/c0d69bde6fc373270766a00db333c64f35496d67",
+                "reference": "c0d69bde6fc373270766a00db333c64f35496d67",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "4.8.1",
+                "johnpbloch/wordpress-core": "4.9.5",
                 "johnpbloch/wordpress-core-installer": "^1.0",
                 "php": ">=5.3.2"
             },
@@ -393,29 +397,32 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2017-08-02 21:47:41"
+            "time": "2018-04-03T22:47:48+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "4.8.1",
+            "version": "4.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "eee7b6128469d31803da3a07aaac9c442f81758e"
+                "reference": "442ae6c761e3b20cc6a000bee8fefcde5dbab3fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/eee7b6128469d31803da3a07aaac9c442f81758e",
-                "reference": "eee7b6128469d31803da3a07aaac9c442f81758e",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/442ae6c761e3b20cc6a000bee8fefcde5dbab3fa",
+                "reference": "442ae6c761e3b20cc6a000bee8fefcde5dbab3fa",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
+            "provide": {
+                "wordpress/core-implementation": "4.9.5"
+            },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -430,20 +437,20 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2017-08-02 21:47:36"
+            "time": "2018-04-03T22:47:40+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
-            "version": "1.0.0",
+            "version": "1.0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core-installer.git",
-                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2"
+                "reference": "7941acd71725710a789daabe0557429da63e7ac6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/e9e767f2d9f994f358c34b41def2c410ad8717f2",
-                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/7941acd71725710a789daabe0557429da63e7ac6",
+                "reference": "7941acd71725710a789daabe0557429da63e7ac6",
                 "shasum": ""
             },
             "require": {
@@ -479,7 +486,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2017-05-31 18:42:33"
+            "time": "2018-01-29T14:49:29+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -521,7 +528,7 @@
             "keywords": [
                 "env"
             ],
-            "time": "2017-07-17 20:41:59"
+            "time": "2017-07-17T20:41:59+00:00"
         },
         {
             "name": "patchwork/utf8",
@@ -580,7 +587,7 @@
                 "utf-8",
                 "utf8"
             ],
-            "time": "2016-05-18 13:57:10"
+            "time": "2016-05-18T13:57:10+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -637,7 +644,7 @@
             "keywords": [
                 "wordpress wp bcrypt password"
             ],
-            "time": "2016-03-01 16:27:06"
+            "time": "2016-03-01T16:27:06+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -645,24 +652,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "3dd3d8f90e6604e75cca48ec32b033b50b05135b"
+                "reference": "fe2a5c22c94949983be10263417f47f8551d5946"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3dd3d8f90e6604e75cca48ec32b033b50b05135b",
-                "reference": "3dd3d8f90e6604e75cca48ec32b033b50b05135b",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/fe2a5c22c94949983be10263417f47f8551d5946",
+                "reference": "fe2a5c22c94949983be10263417f47f8551d5946",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8 || ^5.0"
+                "phpunit/phpunit": "^4.8.35 || ^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -672,7 +679,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause-Attribution"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -687,19 +694,19 @@
                 "env",
                 "environment"
             ],
-            "time": "2017-08-08 20:02:34"
+            "time": "2018-03-19T21:27:48+00:00"
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
-            "version": "4.4.11",
+            "version": "4.4.12",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/advanced-custom-fields/",
-                "reference": "tags/4.4.11"
+                "reference": "tags/4.4.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.11.zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields.4.4.12.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -728,19 +735,19 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/feedwordpress/",
-            "time": "2016-12-13 14:08:44"
+            "time": "2016-12-13T14:08:44+00:00"
         },
         {
             "name": "wpackagist-plugin/jetpack",
-            "version": "5.2.1",
+            "version": "5.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/5.2.1"
+                "reference": "tags/5.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.5.2.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.5.9.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -752,15 +759,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "5.2",
+            "version": "5.9.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/5.2"
+                "reference": "tags/5.9.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.5.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.5.9.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -794,23 +801,23 @@
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "2.9.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "68fb8e5c76da4a220275ecce7179f25c9ecc2b13"
+                "reference": "f4e70f6196e5ab1c165ebc9fc32eaf37a5b46f17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/68fb8e5c76da4a220275ecce7179f25c9ecc2b13",
-                "reference": "68fb8e5c76da4a220275ecce7179f25c9ecc2b13",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/f4e70f6196e5ab1c165ebc9fc32eaf37a5b46f17",
+                "reference": "f4e70f6196e5ab1c165ebc9fc32eaf37a5b46f17",
                 "shasum": ""
             },
             "require": {
                 "ext-simplexml": "*",
                 "ext-tokenizer": "*",
                 "ext-xmlwriter": "*",
-                "php": ">=5.1.2"
+                "php": ">=5.4.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.0"
@@ -868,7 +875,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-07-13 01:37:12"
+            "time": "2017-04-20T05:40:05+00:00"
         },
         {
             "name": "wpackagist-plugin/debug-bar",
@@ -892,15 +899,15 @@
         },
         {
             "name": "wpackagist-plugin/query-monitor",
-            "version": "2.13.4",
+            "version": "2.17.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/query-monitor/",
-                "reference": "tags/2.13.4"
+                "reference": "tags/2.17.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.2.13.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.2.17.0.zip",
                 "reference": null,
                 "shasum": null
             },
