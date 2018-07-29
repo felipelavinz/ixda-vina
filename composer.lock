@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d936c350411dd41cd919e284002ac75d",
+    "content-hash": "26a7746a2c81d9277e44e053c1098428",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -362,20 +362,20 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.9.5",
+            "version": "4.9.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "c0d69bde6fc373270766a00db333c64f35496d67"
+                "reference": "6697a15cdfd60cfdf9f4bf04a4e7637a8d2a5afa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/c0d69bde6fc373270766a00db333c64f35496d67",
-                "reference": "c0d69bde6fc373270766a00db333c64f35496d67",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/6697a15cdfd60cfdf9f4bf04a4e7637a8d2a5afa",
+                "reference": "6697a15cdfd60cfdf9f4bf04a4e7637a8d2a5afa",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "4.9.5",
+                "johnpbloch/wordpress-core": "4.9.7",
                 "johnpbloch/wordpress-core-installer": "^1.0",
                 "php": ">=5.3.2"
             },
@@ -397,27 +397,27 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-04-03T22:47:48+00:00"
+            "time": "2018-07-05T18:12:19+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "4.9.5",
+            "version": "4.9.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "442ae6c761e3b20cc6a000bee8fefcde5dbab3fa"
+                "reference": "1116e10f71f8fb811856df212af652c427bc6bd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/442ae6c761e3b20cc6a000bee8fefcde5dbab3fa",
-                "reference": "442ae6c761e3b20cc6a000bee8fefcde5dbab3fa",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/1116e10f71f8fb811856df212af652c427bc6bd1",
+                "reference": "1116e10f71f8fb811856df212af652c427bc6bd1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "provide": {
-                "wordpress/core-implementation": "4.9.5"
+                "wordpress/core-implementation": "4.9.7"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -437,7 +437,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-04-03T22:47:40+00:00"
+            "time": "2018-07-05T18:12:13+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -652,12 +652,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "fe2a5c22c94949983be10263417f47f8551d5946"
+                "reference": "8abb4f9aa89ddea9d52112c65bbe8d0125e2fa8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/fe2a5c22c94949983be10263417f47f8551d5946",
-                "reference": "fe2a5c22c94949983be10263417f47f8551d5946",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/8abb4f9aa89ddea9d52112c65bbe8d0125e2fa8e",
+                "reference": "8abb4f9aa89ddea9d52112c65bbe8d0125e2fa8e",
                 "shasum": ""
             },
             "require": {
@@ -694,7 +694,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2018-03-19T21:27:48+00:00"
+            "time": "2018-07-29T20:33:41+00:00"
         },
         {
             "name": "wpackagist-plugin/advanced-custom-fields",
