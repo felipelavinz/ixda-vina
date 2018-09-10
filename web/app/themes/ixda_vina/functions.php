@@ -210,9 +210,9 @@ function ixda_has_events() {
  * @todo
  */
 function ixda_has_jobs() {
-	static $jobs;
+	static $jobs_feed;
 	$jobs_feed = fetch_feed('https://www.getonbrd.cl/categories/diseno-ux/rss');
-	if ( is_wp_error( $jobs ) ) {
+	if ( is_wp_error( $jobs_feed ) ) {
 		return false;
 	}
 	return $jobs_feed->get_items( 0, 4 );
