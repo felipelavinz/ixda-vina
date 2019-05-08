@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4cb5c4be0f7a993be0ba55d448f08b61",
+    "content-hash": "4dbb7de1e50281bdedaa51b9c2a50783",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -405,12 +405,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "330b2cff447e4cd8c2388c5386c5b49e5affe1dc"
+                "reference": "3a1f405fccf65c2f43d73156bb1914e33f411a6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/330b2cff447e4cd8c2388c5386c5b49e5affe1dc",
-                "reference": "330b2cff447e4cd8c2388c5386c5b49e5affe1dc",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/3a1f405fccf65c2f43d73156bb1914e33f411a6f",
+                "reference": "3a1f405fccf65c2f43d73156bb1914e33f411a6f",
                 "shasum": ""
             },
             "require": {
@@ -430,14 +430,14 @@
                     "homepage": "http://wordpress.org/about/"
                 }
             ],
-            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "description": "WordPress is open source software you can use to create a beautiful website, blog, or app.",
             "homepage": "http://wordpress.org/",
             "keywords": [
                 "blog",
                 "cms",
                 "wordpress"
             ],
-            "time": "2019-05-02T16:28:29+00:00"
+            "time": "2019-05-07T21:27:15+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -864,24 +864,6 @@
             "homepage": "https://wordpress.org/themes/palmeria/"
         },
         {
-            "name": "wpackagist-theme/twentynineteen",
-            "version": "1.4",
-            "source": {
-                "type": "svn",
-                "url": "https://themes.svn.wordpress.org/twentynineteen/",
-                "reference": "1.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/twentynineteen.1.4.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-theme",
-            "homepage": "https://wordpress.org/themes/twentynineteen/"
-        },
-        {
             "name": "wpackagist-theme/twentyseventeen",
             "version": "2.1",
             "source": {
@@ -996,6 +978,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/debug-bar/"
+        },
+        {
+            "name": "wpackagist-theme/twentynineteen",
+            "version": "1.4",
+            "source": {
+                "type": "svn",
+                "url": "https://themes.svn.wordpress.org/twentynineteen/",
+                "reference": "1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/theme/twentynineteen.1.4.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-theme",
+            "homepage": "https://wordpress.org/themes/twentynineteen/"
         }
     ],
     "aliases": [],
